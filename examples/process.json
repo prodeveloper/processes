@@ -1,0 +1,14 @@
+{
+  "name": "Registration",
+  "belts": [
+    {
+      "validation": [
+        "EmailValidation"
+      ],
+      "persistence": [
+        "SaveInDatabase",
+        "UpdateElastic"
+      ]
+    }
+  ]
+}

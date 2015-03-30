@@ -1,0 +1,20 @@
+{
+  "name": "chencha/processes",
+  "description": "Enables definition of a process in a system via json file",
+  "require": {
+    "chencha/conveyor": "dev-master"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Chencha Jacob",
+      "email": "jmokua@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Chencha\\": "Chencha"
+    }
+  }
+}
