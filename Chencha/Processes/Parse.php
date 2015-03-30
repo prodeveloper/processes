@@ -9,21 +9,23 @@
 namespace Chencha\Processes;
 
 
+use Chencha\Conveyor;
+use Chencha\Conveyor\Subject;
+use Chencha\Processes\Process;
 class Parse
 {
-    function run($subject, $processFileLocation)
+    function run(Subject $subject,array $processArray)
     {
-        $data = json_decode(file_get_contents($processFileLocation));
-        $process = new \Chencha\Conveyor\Defaults\Process();
-        foreach ($data->belts[0] as $belt) {
-            $belt_d = new \Chencha\Conveyor\Defaults\Belt();
+        $process = new Process();
+        foreach ($processArray['belts'][0] as $belt) {
+            $belt_d = new Belt();
             foreach ($belt as $machine) {
                 $belt_d->registerMachines(new $machine);
             }
             $process->registerBelts($belt_d);
         }
 
-        $mainConveyor = new Chencha\Conveyor();
+        $mainConveyor = new Conveyor();
         $process = $mainConveyor->buildProcess($process);
         $process->run($subject);
         return $process;
