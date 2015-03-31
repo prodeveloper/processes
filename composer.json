@@ -2,7 +2,8 @@
   "name": "chencha/processes",
   "description": "Enables definition of a process in a system via json file",
   "require": {
-    "chencha/conveyor": "dev-master"
+    "chencha/conveyor": "dev-master",
+    "mnapoli/php-di": "dev-master"
   },
   "license": "MIT",
   "authors": [
