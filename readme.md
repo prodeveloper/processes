@@ -9,13 +9,8 @@ A sample process description would be:
 	  "name": "Registration",
 	  "belts": [
 	    {
-	      "validation": [
-		"EmailValidation"
-	      ],
-	      "persistence": [
-		"SaveInDatabase",
-		"UpdateElastic"
-	      ]
+	      "validation": ["EmailValidation"],
+	      "persistence": [SaveInDatabase","UpdateElastic"]
 	    }
 	  ]
 	}
